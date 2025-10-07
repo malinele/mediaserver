@@ -1,0 +1,24 @@
+clients:
+  - id: betsson
+    display_name: "Betsson"
+    playback_profile: "default_abr"
+    token_ttl_seconds: 90
+    ip_allowlist: ["203.0.113.0/24"]
+    geo:
+      allow_countries: ["SE", "EE", "LT", "LV", "FI"]
+    max_sessions: 10000
+    watermark:
+      enabled: true
+      template: "BETSSON | {match_id} | {utc_ts}"
+
+  - id: superbet
+    display_name: "Superbet"
+    playback_profile: "economy_abr"
+    token_ttl_seconds: 60
+    ip_allowlist: ["198.51.100.0/24"]
+    geo:
+      deny_countries: ["US", "FR"]
+    max_sessions: 5000
+    watermark:
+      enabled: true
+      template: "SUPERBET | {match_id} | {utc_ts}"
