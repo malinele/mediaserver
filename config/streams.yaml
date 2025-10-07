@@ -1,0 +1,11 @@
+streams:
+  - id: "TT-2025-10-07-001"
+    description: "Table Tennis - Arena 1"
+    adapters:
+      primary: {kind: "nimble", base_url: "https://nimble-a.internal", api_key: "env:NIMBLE_A_KEY"}
+      backup:  {kind: "nimble", base_url: "https://nimble-b.internal", api_key: "env:NIMBLE_B_KEY"}
+    ingest:
+      srt: {mode: "listener", port: 9001, passphrase_env: "SRT_PASSPHRASE"}
+    packaging:
+      ll_hls_path: "/live/TT-2025-10-07-001/index.m3u8"
+    assigned_clients: ["betsson", "superbet"]
