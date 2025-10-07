@@ -1,0 +1,18 @@
+profiles:
+  - name: default_abr
+    gop_seconds: 2
+    parts_seconds: 0.333
+    segment_seconds: 1
+    renditions:
+      - {name: "1080p", w: 1920, h: 1080, kbps: 6000, fps: 30}
+      - {name: "720p",  w: 1280, h: 720,  kbps: 3000, fps: 30}
+      - {name: "540p",  w: 960,  h: 540,  kbps: 1600, fps: 30}
+      - {name: "360p",  w: 640,  h: 360,  kbps: 900,  fps: 30}
+  - name: economy_abr
+    gop_seconds: 2
+    parts_seconds: 0.5
+    segment_seconds: 2
+    renditions:
+      - {name: "720p",  w: 1280, h: 720,  kbps: 2200, fps: 30}
+      - {name: "540p",  w: 960,  h: 540,  kbps: 1200, fps: 30}
+      - {name: "360p",  w: 640,  h: 360,  kbps: 700,  fps: 30}

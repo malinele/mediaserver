@@ -1,0 +1,23 @@
+{
+  "title": "Media Controller",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Ingest Up",
+      "targets": [
+        {
+          "expr": "avg(media_ingest_up)"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Part Age",
+      "targets": [
+        {
+          "expr": "max(media_part_age_seconds)"
+        }
+      ]
+    }
+  ]
+}
